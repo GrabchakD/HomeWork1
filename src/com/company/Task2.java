@@ -41,13 +41,10 @@ public class Task2 {
             arr[i] = sc.nextInt();
         }
 
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] < 0 && i < arr.length/2) {
-                arr[i] = i + 1;
-            } if(arr[i] < 0 && i > arr.length/2) {
-                arr[i] = i - 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr[i] = (arr[i - 1] + arr[i + 1]) / 2;
             }
-            System.out.println(arr[i]);
         }
     }
 }
