@@ -22,23 +22,23 @@ Output
 
 package com.company;
 
+import java.util.Scanner;
+
 public class Task1 {
     public static void main(String[] args) {
-        int arr[] = {6, 2, 9, 1, 3, 4, 5};
-        int k = 5;
-        int length = 7;
+        Scanner sc = new Scanner(System.in);
+        int length = 5;
+        int k = 2;
+        int arr[] = {5, 6, 1, 2, 6};
+        int temp ;
 
 
-            for (int i = 0; i < k; i++) {
-                int empty = arr[0];
-                int p;
 
-                for (p = 0; p < length - 1; p++) {
-                    arr[p] = arr[p + 1];
-                }
-                arr[p] = empty;
-            }
-
+        for(int i = 0; i < arr.length - 1; i++) {
+            temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
 
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
